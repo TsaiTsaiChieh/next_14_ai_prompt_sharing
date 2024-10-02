@@ -2,7 +2,7 @@
 const Feed = () => {
   return (
     <div>
-      Feeds
+      Feed
     </div>
   );
 }
