@@ -1,23 +1,23 @@
-import '@styles/globals.css'
-
+import Nav from "@components/Nav/Nav";
+import "@styles/globals.css";
 
 export const metadata = {
   title: "Promptopia",
   description: "Discover & Share AI prompts",
 };
 
-export default function RootLayout({children}) {
+export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body>
-        <div className="main">
-          <div className="gradient" />
+        <div className='main'>
+          <div className='gradient' />
         </div>
-        <main className="app">
+        <main className='app'>
+          <Nav />
           {children}
         </main>
       </body>
     </html>
   );
 }
-
