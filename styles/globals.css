@@ -291,6 +291,7 @@ body {
 /* Form Component */
 .form_textarea {
   width: 100%;
+  box-sizing: border-box;
   display: flex;
   /* rounded-lg */
   border-radius: 8px;
@@ -304,10 +305,12 @@ body {
   /* text-gray-500 */
   color: #6b7280;
   outline: none;
+  border: none;
 }
 
 .form_input {
   width: 100%;
+  box-sizing: border-box;
   display: flex;
   /* rounded-lg */
   border-radius: 8px;
@@ -320,6 +323,7 @@ body {
   /* text-gray-500 */
   color: #6b7280;
   outline: none;
+  border: none;
 }
 
 /* Nav Component */
