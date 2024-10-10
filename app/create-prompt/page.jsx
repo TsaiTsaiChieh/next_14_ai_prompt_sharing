@@ -25,7 +25,7 @@ const CreatePrompt = () => {
           tag: post.tag,
         }),
       });
-      console.log(res, res.ok);
+
       if (res.ok) {
         router.push("/");
       }
