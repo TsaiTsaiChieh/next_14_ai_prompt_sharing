@@ -1,10 +1,5 @@
-
-const PromptCard = () => {
-  return (
-    <div>
-      PromptCard
-    </div>
-  );
-}
+const PromptCard = ({ data, handleTagClick }) => {
+  return <div>PromptCard</div>;
+};
 
 export default PromptCard;

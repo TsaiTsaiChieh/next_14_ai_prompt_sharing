@@ -246,48 +246,6 @@ body {
   padding: 20px;
 }
 
-.prompt_layout {
-  /* mt-16 */
-  margin-top: 24px;
-  /* py-8  */
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-@media (min-width: 640px) {
-  .prompt_layout {
-    /* sm:columns-2 */
-    column-count: 2;
-    /* sm:gap-6  */
-    column-gap: 24px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .prompt_layout {
-    /* xl:columns-3 */
-    column-count: 3;
-  }
-}
-
-
-/* Feed Component */
-.feed {
-  /* mt-16 */
-  margin-top: 64px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  /* max-w-xl */
-  max-width: 640px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  /* gap-2 */
-  gap: 8px;
-}
-
 /* Form Component */
 .form_textarea {
   width: 100%;
