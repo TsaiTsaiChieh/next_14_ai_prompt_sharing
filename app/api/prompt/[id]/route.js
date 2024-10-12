@@ -17,7 +17,7 @@ export const PATCH = async (req, { params }) => {
   const { prompt, tag } = await req.json();
   try {
     await connectToDB();
-    const existPrompt = await Prompt.findById(params.id).populate("creator");
+    const existPrompt = await Prompt.findById(params.id);
     if (!existPrompt) return new Response("Prompt not found", { status: 404 });
     existPrompt.prompt = prompt;
     existPrompt.tag = tag;
