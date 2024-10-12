@@ -23,7 +23,7 @@ const Feed = () => {
 
   useEffect(() => {
     const fetchPost = async () => {
-      const res = await fetch("/api/prompt", {
+      const res = await fetch(`/api/prompt?timestamp=${Date.now()}`, {
         method: "GET",
         cache: "no-store",
       });
