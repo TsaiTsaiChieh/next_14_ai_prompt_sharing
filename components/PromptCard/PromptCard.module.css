@@ -1,0 +1,72 @@
+.promptCard {
+  flex: 1;
+  break-inside: avoid;
+  /* rounded-lg */
+  border-radius: 8px;
+  /* border-gray-300 */
+  border: 1px solid #d1d5db;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-clip: padding-box;
+  /* p-6 */
+  padding: 12px;
+  /* pb-4 */
+  padding-bottom: 16px;
+  backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 360px;
+  height: fit-content;
+}
+
+.promptCard__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+
+.promptCard__profile {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.promptCard__profileImage {
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.promptCard__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.promptCard__username {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.promptCard__email {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.promptCard__content {
+  margin: 1rem 0;
+  font-family: "Satoshi", sans-serif;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.promptCard__tag {
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
