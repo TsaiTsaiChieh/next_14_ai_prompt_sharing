@@ -303,26 +303,6 @@ body {
   }
 }
 
-/* PromptCard Component */
-.prompt_card {
-  flex: 1;
-  break-inside: avoid;
-  /* rounded-lg */
-  border-radius: 8px;
-  /* border-gray-300 */
-  border: 1px solid #d1d5db;
-  background-color: rgba(255, 255, 255, 0.2);
-  background-clip: padding-box;
-  /* p-6 */
-  padding: 24px;
-  /* pb-4 */
-  padding-bottom: 16px;
-  backdrop-filter: blur(10px);
-  width: 100%;
-  max-width: 360px;
-  height: fit-content;
-}
-
 /* Flex Utilities */
 .flex-center {
   display: flex;
