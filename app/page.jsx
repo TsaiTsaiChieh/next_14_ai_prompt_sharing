@@ -2,12 +2,6 @@ import Feed from "@components/Feed/Feed";
 import styles from "./page.module.css";
 
 const Home = () => {
-  console.log(process.env.VERCEL);
-  console.log(process.env.NEXT_PUBLIC_BUILD_DATE);
-  console.log(process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF);
-  console.log(process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA);
-  console.log(process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_MESSAGE);
-
   return (
     <section className={`${styles.home} flex-center`}>
       <h1 className={`${styles.home__heading} head_text`}>
