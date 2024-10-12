@@ -4,12 +4,6 @@ import { useEffect, useState } from "react";
 import styles from "./Feed.module.css";
 import PromptCard from "@components/PromptCard/PromptCard";
 
-const PromptCardList = ({ data, handleTagClick }) => {
-  console.log(process.env.VERCEL);
-  console.log(process.env.NEXT_PUBLIC_BUILD_DATE);
-  console.log(process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF);
-  console.log(process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA);
-  console.log(process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_MESSAGE);
   return (
     <div className='prompt_layout'>
       {data.map(ele => (
