@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import styles from "./Feed.module.css";
 import PromptCard from "@components/PromptCard/PromptCard";
 
+const PromptCardList = ({ data, handleTagClick }) => {
   return (
     <div className='prompt_layout'>
       {data.map(ele => (
