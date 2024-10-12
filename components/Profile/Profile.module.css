@@ -1,0 +1,15 @@
+.profileSection {
+  width: 100%;
+}
+
+.profileSection__header {
+  text-align: left;
+}
+
+.profileSection__desc {
+  text-align: left;
+}
+
+.profileSection__promptLayout {
+  margin-top: 40px;
+}

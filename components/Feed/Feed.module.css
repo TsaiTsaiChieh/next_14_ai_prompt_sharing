@@ -24,7 +24,7 @@
   border-color: #666;
 }
 
-.feed__promptCardList {
+/* .feed__promptCardList {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
@@ -47,4 +47,4 @@
     column-gap: 50px;
     row-gap: 20px;
   }
-}
+} */

@@ -6,7 +6,7 @@ import PromptCard from "@components/PromptCard/PromptCard";
 
 const PromptCardList = ({ data, handleTagClick }) => {
   return (
-    <div className={styles.feed__promptCardList}>
+    <div className='prompt_layout'>
       {data.map(ele => (
         <PromptCard
           key={ele._id}
@@ -25,7 +25,6 @@ const Feed = () => {
     const fetchPost = async () => {
       const res = await fetch("/api/prompt", { method: "GET" });
       const data = await res.json();
-      console.log(data);
       setPosts(data);
     };
     fetchPost();

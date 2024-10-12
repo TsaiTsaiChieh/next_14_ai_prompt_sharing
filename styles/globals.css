@@ -246,6 +246,7 @@ body {
   padding: 20px;
 }
 
+
 /* Form Component */
 .form_textarea {
   width: 100%;
@@ -302,6 +303,52 @@ body {
     display: none;
   }
 }
+
+
+.prompt_layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  padding: 32px;
+  gap: 20px;
+}
+
+@media (min-width: 640px) {
+  .prompt_layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    row-gap: 20px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .prompt_layout {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
+    row-gap: 20px;
+  }
+}
+
+
+/* .prompt_layout {
+  margin-top: 24px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+@media (min-width: 640px) {
+  .prompt_layout {
+    column-count: 2;
+    column-gap: 24px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .prompt_layout {
+    column-count: 3;
+  }
+} */
 
 /* Flex Utilities */
 .flex-center {

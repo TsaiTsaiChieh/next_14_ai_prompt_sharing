@@ -2,9 +2,13 @@
 import Image from "next/image";
 import styles from "./PromptCard.module.css";
 import { useState } from "react";
+import { useSession } from "next-auth/react";
+import { usePathname } from "next/navigation";
 
-const PromptCard = ({ post, handleTagClick }) => {
+const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
+  const { data: session } = useSession();
   const [copied, setCopied] = useState("");
+  const pathName = usePathname();
 
   const handleCopy = () => {
     setCopied(post.prompt);
@@ -54,6 +58,23 @@ const PromptCard = ({ post, handleTagClick }) => {
       >
         #{post.tag}
       </p>
+
+      {session?.user.id === post.creator._id && pathName === "/profile" && (
+        <div className={`flex-center ${styles.promptCard__actions}`}>
+          <p
+            className={`green_gradient ${styles.promptCard__edit}`}
+            onClick={handleEdit}
+          >
+            Edit
+          </p>
+          <p
+            className={`orange_gradient ${styles.promptCard__delete}`}
+            onClick={handleDelete}
+          >
+            Delete
+          </p>
+        </div>
+      )}
     </div>
   );
 };
