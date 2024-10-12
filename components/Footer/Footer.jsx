@@ -2,10 +2,26 @@ import styles from "./Footer.module.css";
 
 const Footer = () => {
   const formatDate = isoDateString => {
-    const offsetHours = new Date(isoDateString).getTimezoneOffset() / -60;
-    const formattedOffset = `${offsetHours >= 0 ? "+" : ""}${Math.abs(
-      offsetHours
-    )}`;
+    const date = new Date(isoDateString);
+
+    const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+    const options = {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      timeZone: userTimeZone,
+      timeZoneName: "short",
+    };
+
+    const formattedDate = new Intl.DateTimeFormat("en-US", options).format(
+      date
+    );
+
+    return formattedDate;
   };
   return (
     <footer className={styles.footer}>
