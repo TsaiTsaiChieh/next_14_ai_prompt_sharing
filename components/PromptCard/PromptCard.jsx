@@ -3,12 +3,13 @@ import Image from "next/image";
 import styles from "./PromptCard.module.css";
 import { useState } from "react";
 import { useSession } from "next-auth/react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
   const { data: session } = useSession();
   const [copied, setCopied] = useState("");
   const pathName = usePathname();
+  const router = useRouter();
 
   const handleCopy = () => {
     setCopied(post.prompt);
@@ -17,10 +18,21 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
       setCopied("");
     }, 3000);
   };
+
+  const handleProfileClick = () => {
+    session.user.id === post.creator._id
+      ? router.push("/profile")
+      : router.push(
+          `/profile/${post.creator._id}?name=${post.creator.username}`
+        );
+  };
   return (
     <div className={styles.promptCard}>
       <div className={styles.promptCard__header}>
-        <div className={styles.promptCard__profile}>
+        <div
+          className={styles.promptCard__profile}
+          onClick={handleProfileClick}
+        >
           <Image
             className={styles.promptCard__profileImage}
             src={post.creator.image}

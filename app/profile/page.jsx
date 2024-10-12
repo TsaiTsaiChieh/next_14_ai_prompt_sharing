@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-import Profile from "../../components/Profile/Profile";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import Profile from "@components/Profile/Profile";
 
 const MyProfile = () => {
   const { data: session } = useSession();
