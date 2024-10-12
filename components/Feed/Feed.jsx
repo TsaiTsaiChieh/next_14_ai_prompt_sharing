@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import styles from "./Feed.module.css";
 import PromptCard from "@components/PromptCard/PromptCard";
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 const PromptCardList = ({ data, handleTagClick }) => {
   return (
@@ -23,9 +25,8 @@ const Feed = () => {
 
   useEffect(() => {
     const fetchPost = async () => {
-      const res = await fetch(`/api/prompt?timestamp=${Date.now()}`, {
+      const res = await fetch("/api/prompt", {
         method: "GET",
-        cache: "no-store",
       });
       const data = await res.json();
       setPosts(data);
