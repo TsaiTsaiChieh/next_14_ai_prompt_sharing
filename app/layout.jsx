@@ -1,4 +1,4 @@
-import Footer from "@components/Footer/footer";
+import Footer from "@components/Footer/Footer";
 import Nav from "@components/Nav/Nav";
 import Provider from "@components/Provider/Provider";
 import "@styles/globals.css";
