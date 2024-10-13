@@ -66,7 +66,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
       <p className={styles.promptCard__content}>{post.prompt}</p>
       <p
         className={`blue_gradient ${styles.promptCard__tag}`}
-        onClick={handleTagClick && handleTagClick(post.tag)}
+        onClick={() => handleTagClick && handleTagClick(post.tag)}
       >
         #{post.tag}
       </p>
