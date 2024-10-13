@@ -5,7 +5,7 @@ const Footer = () => {
     const date = new Date(isoDateString);
 
     const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-
+    console.log(userTimeZone);
     const options = {
       year: "numeric",
       month: "2-digit",
