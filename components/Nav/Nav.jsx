@@ -16,8 +16,8 @@ const Nav = () => {
       const res = await getProviders();
       setProvider(res);
     };
-    if (status === "authenticated") setupProviders();
-  }, [status]);
+    setupProviders();
+  }, []);
 
   return (
     <nav className={`flex-between ${styles.nav}`}>
@@ -35,7 +35,9 @@ const Nav = () => {
 
       {/* Desktop Navigation */}
       <div className={styles.nav__desktopContainer}>
-        {session?.user ? (
+        {status === "loading" ? (
+          <p>Loading...</p>
+        ) : session?.user ? (
           <div className={styles.nav__userActions}>
             <Link href='create-prompt' className='black_btn'>
               Create Prompt
@@ -73,7 +75,9 @@ const Nav = () => {
       </div>
       {/* Mobile Navigation */}
       <div className={styles.nav__mobileContainer}>
-        {session?.user ? (
+        {status === "loading" ? (
+          <p>Loading...</p>
+        ) : session?.user ? (
           <div className={styles.nav__mobileUser}>
             <Image
               className={styles.nav__profileImage}
