@@ -22,6 +22,7 @@ const Feed = () => {
   // search result
   const [searchText, setSearchText] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const [searchTimeout, setSearchTimeout] = useState(null);
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -43,9 +44,15 @@ const Feed = () => {
     );
   };
   const handleSearchChange = e => {
-    const searchVal = e.target.value;
-    setSearchText(searchVal);
-    setSearchResults(filterPosts(searchVal));
+    clearTimeout(searchTimeout);
+    setSearchText(e.target.value);
+
+    // debounce method
+    setSearchTimeout(() =>
+      setTimeout(() => {
+        setSearchResults(filterPosts(e.target.value));
+      }, 500)
+    );
   };
 
   const handleTagClick = tag => {
