@@ -1,10 +1,11 @@
 import Prompt from "@models/Prompt";
 import { connectToDB } from "@utils/database";
 
-export const GET = async _req => {
+export const GET = async (_req, res) => {
   try {
     await connectToDB();
     const prompts = await Prompt.find({}).populate("creator");
+    res.setHeader("Cache-Control", "no-store");
     return new Response(JSON.stringify(prompts), { status: 200 });
   } catch (error) {
     console.error(error);

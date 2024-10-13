@@ -3,8 +3,6 @@
 import { useEffect, useState } from "react";
 import styles from "./Feed.module.css";
 import PromptCard from "@components/PromptCard/PromptCard";
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
 
 const PromptCardList = ({ data, handleTagClick }) => {
   return (
